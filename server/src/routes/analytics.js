@@ -23,20 +23,20 @@ router.get('/', protect, async (req, res) => {
     let estimatedPipeline = 0;
     
     submissions.forEach(sub => {
-      // Budgets could be like: '< $2k', '$2k - $5k', '$5k - $10k', '$10k - $25k', '$25k+'
+      // Budgets could be like: '< $1k', '$1k - $2.5k', '$2.5k - $5k', '$5k - $10k', '$10k+'
       const b = sub.budget.toLowerCase();
-      if (b.includes('25k+')) {
-        estimatedPipeline += 25000;
-      } else if (b.includes('10k') && b.includes('25k')) {
-        estimatedPipeline += 17500; // middle of 10k-25k
+      if (b.includes('10k+')) {
+        estimatedPipeline += 10000;
       } else if (b.includes('5k') && b.includes('10k')) {
         estimatedPipeline += 7500;  // middle of 5k-10k
-      } else if (b.includes('2k') && b.includes('5k')) {
-        estimatedPipeline += 3500;  // middle of 2k-5k
-      } else if (b.includes('<') && b.includes('2k')) {
-        estimatedPipeline += 1000;  // under 2k
+      } else if (b.includes('2.5k') && b.includes('5k')) {
+        estimatedPipeline += 3750;  // middle of 2.5k-5k
+      } else if (b.includes('1k') && b.includes('2.5k')) {
+        estimatedPipeline += 1750;  // middle of 1k-2.5k
+      } else if (b.includes('<') && b.includes('1k')) {
+        estimatedPipeline += 500;   // under 1k
       } else {
-        // Fallback fallback if they typed custom budget
+        // Fallback if they typed custom budget
         const num = parseInt(b.replace(/[^0-9]/g, ''));
         if (!isNaN(num)) {
           estimatedPipeline += num;

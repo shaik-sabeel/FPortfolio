@@ -4,7 +4,7 @@ import { Check, ShieldCheck, HelpCircle } from 'lucide-react';
 const tiers = [
   {
     title: 'Starter Website',
-    budget: '$1,500 - $3,000',
+    budget: '$299 - $599',
     description: 'Perfect for startups, local businesses, or personal portfolios needing a sleek, professional digital presence.',
     features: [
       '3 - 5 Custom Pages (React / Tailwind)',
@@ -16,11 +16,11 @@ const tiers = [
     ],
     popular: false,
     color: '#00D4FF',
-    budgetKey: '< $2k',
+    budgetKey: '< $1k',
   },
   {
     title: 'Business Showcase',
-    budget: '$3,000 - $6,000',
+    budget: '$799 - $1,499',
     description: 'Designed for growing brands requiring custom CMS panel logs, high-fidelity design work, and client integrations.',
     features: [
       'Up to 10 Pages or custom grids',
@@ -33,11 +33,11 @@ const tiers = [
     ],
     popular: true,
     color: '#915EFF',
-    budgetKey: '$2k - $5k',
+    budgetKey: '$1k - $2.5k',
   },
   {
     title: 'Custom Web Application',
-    budget: '$6,000+',
+    budget: '$1,999+',
     description: 'Enterprise-grade SaaS, robust gaming portals, logistics maps, or AI applications tailored to complex user logic.',
     features: [
       'Fully custom frontend & server architecture',
@@ -50,7 +50,7 @@ const tiers = [
     ],
     popular: false,
     color: '#F59E0B',
-    budgetKey: '$10k+',
+    budgetKey: '$2.5k - $5k',
   },
 ];
 

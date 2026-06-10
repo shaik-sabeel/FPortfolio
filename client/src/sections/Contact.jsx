@@ -268,11 +268,11 @@ export default function Contact() {
                         }`}
                       >
                         <option value="">Select range...</option>
-                        <option value="< $2k">Under $2,000</option>
-                        <option value="$2k - $5k">$2,000 - $5,000</option>
+                        <option value="< $1k">Under $1,000</option>
+                        <option value="$1k - $2.5k">$1,000 - $2,500</option>
+                        <option value="$2.5k - $5k">$2,500 - $5,000</option>
                         <option value="$5k - $10k">$5,000 - $10,000</option>
-                        <option value="$10k - $25k">$10,000 - $25,000</option>
-                        <option value="$10k+">$25,000 or custom scale</option>
+                        <option value="$10k+">$10,000 or custom scale</option>
                       </select>
                       {validationErrors.budget && (
                         <span className="text-red-400 text-[11px] font-medium">{validationErrors.budget}</span>
